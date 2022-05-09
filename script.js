@@ -26,13 +26,9 @@ function selectFromInterval(arr, a, b) {
 
     if (arrCheck || paramsCheck) {
         throw new Error('Ошибка!');
-    }
-
-    else if (a > b) {
+    } else if (a > b) {
         return arr.filter(item => (a >= item && item >= b));
-    } 
-    
-    else { 
+    } else { 
         return arr.filter(item => (a <= item && item <= b));
     }
 }
@@ -51,9 +47,7 @@ const myIterable = {
 
                 if (itemsCheck) {
                     throw new Error('Ошибка!');
-                }
-
-                else if (this.from <= this.to) {
+                } else if (this.from <= this.to) {
                     return { 
                         value: this.from++, 
                         done: false 
